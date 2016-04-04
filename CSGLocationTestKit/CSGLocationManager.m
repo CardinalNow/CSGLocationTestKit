@@ -12,7 +12,6 @@
     BOOL _locationFound;
 }
 
-@property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) NSTimer *trackingTimer;
 @property (strong, nonatomic) CLRegion *currentRegion;
 
@@ -24,6 +23,7 @@
     self = [super init];
 
     if(self){
+		[self verifyLocationServicesPermissions];
         _locationManager = [[CLLocationManager alloc] init];
 
         _locationManager.delegate = self;
@@ -36,7 +36,17 @@
     return self;
 }
 
+-(void)verifyLocationServicesPermissions{
+	BOOL enabled = CLLocationManager.locationServicesEnabled;
+	if (enabled) {
+		return;
+	}else{
+	}
+}
+
 -(void)startLocationTracking{
+	
+	
     self.locationManager.distanceFilter = self.distance;
     self.locationManager.desiredAccuracy = self.accuracy;
 

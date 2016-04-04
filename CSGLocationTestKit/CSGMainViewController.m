@@ -41,6 +41,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newLocationWasReceived:) name:LOCATION_UPDATED_NOTIFICATION object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationTrackingStopped) name:LOCATION_TRACKING_STOPPED object:nil];
 
+	[self.locationManager.locationManager requestWhenInUseAuthorization];
     [_locationManager startLocationTracking];
 
     self.title = @"Location Testing";

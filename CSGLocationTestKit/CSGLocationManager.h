@@ -15,6 +15,7 @@
 #define USER_ENTERED_REGION @"USER_ENTERED_REGION"
 
 @interface CSGLocationManager : NSObject <CLLocationManagerDelegate>
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @property (strong, nonatomic) CLLocation *currentLocation;
 @property (assign, nonatomic) CLLocationAccuracy accuracy;

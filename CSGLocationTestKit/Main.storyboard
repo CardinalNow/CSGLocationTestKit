@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="Op2-z5-Gg1">
+            <objects>
+                <viewController id="r71-Y9-f2W" customClass="CSGMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l5R-ee-YYD"/>
+                        <viewControllerLayoutGuide type="bottom" id="psu-nl-Any"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C59-xd-3tq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62q-qf-oua">
+                                <rect key="frame" x="40" y="189" width="520" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HnI-De-ypf"/>
+                                    <constraint firstAttribute="width" constant="280" id="I0Q-75-6cO"/>
+                                    <constraint firstAttribute="height" constant="40" id="sfO-SN-l9N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HnI-De-ypf"/>
+                                        <exclude reference="I0Q-75-6cO"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7Z-Bd-OGD">
+                                <rect key="frame" x="264" y="98" width="73" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="glD-dd-ffn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Map!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Your Current Location:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2o-dT-nYc">
+                                <rect key="frame" x="208" y="148" width="184.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184.5" id="Cdb-LA-4Fa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T7Z-Bd-OGD" firstAttribute="top" secondItem="l5R-ee-YYD" secondAttribute="bottom" constant="78" id="1Pn-AH-MI6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="62q-qf-oua" secondAttribute="trailing" constant="20" id="EvB-Lz-o9T"/>
+                            <constraint firstItem="p2o-dT-nYc" firstAttribute="centerX" secondItem="T7Z-Bd-OGD" secondAttribute="centerX" id="G18-qZ-dwu"/>
+                            <constraint firstItem="62q-qf-oua" firstAttribute="top" secondItem="p2o-dT-nYc" secondAttribute="bottom" constant="20" id="GxP-TL-xuk"/>
+                            <constraint firstItem="p2o-dT-nYc" firstAttribute="top" secondItem="T7Z-Bd-OGD" secondAttribute="bottom" constant="20" id="SMB-DP-3mr"/>
+                            <constraint firstItem="62q-qf-oua" firstAttribute="centerX" secondItem="p2o-dT-nYc" secondAttribute="centerX" id="Sxr-hi-dFb"/>
+                            <constraint firstItem="T7Z-Bd-OGD" firstAttribute="centerX" secondItem="C59-xd-3tq" secondAttribute="centerX" id="nUb-o2-Ix5"/>
+                            <constraint firstItem="62q-qf-oua" firstAttribute="leading" secondItem="C59-xd-3tq" secondAttribute="leadingMargin" constant="20" id="ra3-hH-EC5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentLocationLabel" destination="62q-qf-oua" id="2xI-WY-PQR"/>
+                        <outlet property="mapButton" destination="T7Z-Bd-OGD" id="bAk-ws-iTq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TG6-s6-GLv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664" y="62"/>
+        </scene>
+    </scenes>
+</document>

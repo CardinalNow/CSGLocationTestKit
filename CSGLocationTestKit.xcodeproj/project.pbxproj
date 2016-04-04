@@ -27,6 +27,8 @@
 		6C48AF4416CAFAFE00492C89 /* CSGMapViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C48AF4116CAFAFE00492C89 /* CSGMapViewController_iPhone.xib */; };
 		6C48AF4716CAFC8D00492C89 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C48AF4616CAFC8D00492C89 /* CoreLocation.framework */; };
 		6C48AF4916CAFC9D00492C89 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C48AF4816CAFC9D00492C89 /* MapKit.framework */; };
+		9609F4861CB29C7200532CDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9609F4851CB29C7100532CDD /* Main.storyboard */; };
+		9641635D1CAEF9CF00F16493 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9641635C1CAEF9CF00F16493 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		6C48AF4216CAFAFE00492C89 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CSGMapViewController_iPhone.xib; sourceTree = "<group>"; };
 		6C48AF4616CAFC8D00492C89 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6C48AF4816CAFC9D00492C89 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9609F4851CB29C7100532CDD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9641635C1CAEF9CF00F16493 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				6C48AF4516CAFB1D00492C89 /* managers */,
 				6C48AF3316CAE4EE00492C89 /* viewcontrollers */,
 				6C48AF1416CAE47600492C89 /* Supporting Files */,
+				9641635C1CAEF9CF00F16493 /* Launch Screen.storyboard */,
+				9609F4851CB29C7100532CDD /* Main.storyboard */,
 			);
 			path = CSGLocationTestKit;
 			sourceTree = "<group>";
@@ -191,7 +197,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CSG;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Cardinal Solutions Group";
 			};
 			buildConfigurationList = 6C48AF0516CAE47600492C89 /* Build configuration list for PBXProject "CSGLocationTestKit" */;
@@ -219,9 +225,11 @@
 				6C48AF1816CAE47600492C89 /* InfoPlist.strings in Resources */,
 				6C48AF2016CAE47600492C89 /* Default.png in Resources */,
 				6C48AF2216CAE47600492C89 /* Default@2x.png in Resources */,
+				9609F4861CB29C7200532CDD /* Main.storyboard in Resources */,
 				6C48AF2416CAE47600492C89 /* Default-568h@2x.png in Resources */,
 				6C48AF2A16CAE47600492C89 /* CSGMainViewController_iPhone.xib in Resources */,
 				6C48AF2D16CAE47600492C89 /* CSGMainViewController_iPad.xib in Resources */,
+				9641635D1CAEF9CF00F16493 /* Launch Screen.storyboard in Resources */,
 				6C48AF3D16CAFACE00492C89 /* LincolnCountryClub.gpx in Resources */,
 				6C48AF3E16CAFACE00492C89 /* LincolnNE.gpx in Resources */,
 				6C48AF4316CAFAFE00492C89 /* CSGMapViewController_iPad.xib in Resources */,
@@ -304,6 +312,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -351,9 +360,12 @@
 		6C48AF3116CAE47600492C89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rachel Parsons (Cardinal Solutions) (D7C69CX6K8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CSGLocationTestKit/CSGLocationTestKit-Prefix.pch";
 				INFOPLIST_FILE = "CSGLocationTestKit/CSGLocationTestKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.csg.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -362,9 +374,12 @@
 		6C48AF3216CAE47600492C89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rachel Parsons (Cardinal Solutions) (D7C69CX6K8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CSGLocationTestKit/CSGLocationTestKit-Prefix.pch";
 				INFOPLIST_FILE = "CSGLocationTestKit/CSGLocationTestKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.csg.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
