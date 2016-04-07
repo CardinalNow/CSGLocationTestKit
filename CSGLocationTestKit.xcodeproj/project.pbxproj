@@ -312,7 +312,7 @@
 		6C48AF3116CAE47600492C89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rachel Parsons (Cardinal Solutions) (D7C69CX6K8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CSGLocationTestKit/CSGLocationTestKit-Prefix.pch";
 				INFOPLIST_FILE = "CSGLocationTestKit/CSGLocationTestKit-Info.plist";
@@ -326,7 +326,7 @@
 		6C48AF3216CAE47600492C89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rachel Parsons (Cardinal Solutions) (D7C69CX6K8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CSGLocationTestKit/CSGLocationTestKit-Prefix.pch";
 				INFOPLIST_FILE = "CSGLocationTestKit/CSGLocationTestKit-Info.plist";
