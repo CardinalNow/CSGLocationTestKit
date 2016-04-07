@@ -13,6 +13,7 @@
 #define LOCATION_UPDATED_NOTIFICATION @"LOCATION_UPDATED_NOTIFICATION"
 #define kCurrentLocationKey @"CURRENT_LOCATION_FROM_MANAGER"
 #define USER_ENTERED_REGION @"USER_ENTERED_REGION"
+#define USER_LEFT_REGION @"USER_LEFT_REGION"
 
 @interface CSGLocationManager : NSObject <CLLocationManagerDelegate>
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -21,6 +22,8 @@
 @property (assign, nonatomic) CLLocationAccuracy accuracy;
 @property (assign, nonatomic) CGFloat distance;
 @property (assign, nonatomic) CGFloat trackingTime;
+
++(CSGLocationManager*)sharedInstance;
 
 -(void)startLocationTracking;
 -(void)stopLocationTracking;

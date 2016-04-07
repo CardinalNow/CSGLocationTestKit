@@ -19,18 +19,23 @@
 
 @implementation CSGLocationManager
 
++(CSGLocationManager*)sharedInstance{
+	
+	static CSGLocationManager *_sharedInstance = nil;
+	static dispatch_once_t oncePredicate;
+	
+	dispatch_once(&oncePredicate, ^{
+		_sharedInstance = [[CSGLocationManager alloc] init];
+	});
+	
+	return _sharedInstance;
+}
+
 -(id)init{
     self = [super init];
 
     if(self){
 		[self verifyLocationServicesPermissions];
-        _locationManager = [[CLLocationManager alloc] init];
-
-        _locationManager.delegate = self;
-        _locationManager.distanceFilter = _distance ? _distance : 100;
-        _locationManager.desiredAccuracy = _accuracy ? _accuracy : kCLLocationAccuracyBest;
-
-        _trackingTime = 10;
     }
 
     return self;
@@ -39,8 +44,17 @@
 -(void)verifyLocationServicesPermissions{
 	BOOL enabled = CLLocationManager.locationServicesEnabled;
 	if (enabled) {
+		_locationManager = [[CLLocationManager alloc] init];
+		
+		_locationManager.delegate = self;
+		_locationManager.distanceFilter = _distance ? _distance : 10;
+		_locationManager.desiredAccuracy = _accuracy ? _accuracy : kCLLocationAccuracyBest;
+		
+		_trackingTime = 10;
 		return;
 	}else{
+		[self.locationManager requestAlwaysAuthorization];
+		[self.locationManager requestWhenInUseAuthorization];
 	}
 }
 
@@ -84,7 +98,7 @@
 
 }
 
--(void)startRegionMonitoring:(CLRegion*)region{
+-(void)startRegionMonitoring:(CLCircularRegion*)region{
     self.currentRegion = region;
     [self.locationManager startMonitoringForRegion:self.currentRegion];
 }
@@ -95,7 +109,10 @@
 
 -(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
     [[NSNotificationCenter defaultCenter] postNotificationName:USER_ENTERED_REGION object:nil];
-    [self stopRegionMonitoring];
+}
+
+-(void)locationManager:(CLLocationManager *)manager didExitRegion:(nonnull CLRegion *)region{
+	[[NSNotificationCenter defaultCenter] postNotificationName:USER_LEFT_REGION object:nil];
 }
 
 @end

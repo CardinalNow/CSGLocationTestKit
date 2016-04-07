@@ -17,16 +17,12 @@
 		6C48AF2216CAE47600492C89 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C48AF2116CAE47600492C89 /* Default@2x.png */; };
 		6C48AF2416CAE47600492C89 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C48AF2316CAE47600492C89 /* Default-568h@2x.png */; };
 		6C48AF2716CAE47600492C89 /* CSGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C48AF2616CAE47600492C89 /* CSGMainViewController.m */; };
-		6C48AF2A16CAE47600492C89 /* CSGMainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C48AF2816CAE47600492C89 /* CSGMainViewController_iPhone.xib */; };
-		6C48AF2D16CAE47600492C89 /* CSGMainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C48AF2B16CAE47600492C89 /* CSGMainViewController_iPad.xib */; };
 		6C48AF3B16CAFACE00492C89 /* CSGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C48AF3516CAFACE00492C89 /* CSGLocationManager.m */; };
 		6C48AF3C16CAFACE00492C89 /* CSGMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C48AF3716CAFACE00492C89 /* CSGMapViewController.m */; };
-		6C48AF3D16CAFACE00492C89 /* LincolnCountryClub.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 6C48AF3916CAFACE00492C89 /* LincolnCountryClub.gpx */; };
 		6C48AF3E16CAFACE00492C89 /* LincolnNE.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 6C48AF3A16CAFACE00492C89 /* LincolnNE.gpx */; };
-		6C48AF4316CAFAFE00492C89 /* CSGMapViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C48AF3F16CAFAFE00492C89 /* CSGMapViewController_iPad.xib */; };
-		6C48AF4416CAFAFE00492C89 /* CSGMapViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C48AF4116CAFAFE00492C89 /* CSGMapViewController_iPhone.xib */; };
 		6C48AF4716CAFC8D00492C89 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C48AF4616CAFC8D00492C89 /* CoreLocation.framework */; };
 		6C48AF4916CAFC9D00492C89 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C48AF4816CAFC9D00492C89 /* MapKit.framework */; };
+		9604FBEF1CB6BEC900E5CB5E /* UniversityOfNebraska.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9604FBEE1CB6BEC900E5CB5E /* UniversityOfNebraska.gpx */; };
 		9609F4861CB29C7200532CDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9609F4851CB29C7100532CDD /* Main.storyboard */; };
 		9641635D1CAEF9CF00F16493 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9641635C1CAEF9CF00F16493 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
@@ -47,18 +43,14 @@
 		6C48AF2316CAE47600492C89 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6C48AF2516CAE47600492C89 /* CSGMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGMainViewController.h; sourceTree = "<group>"; };
 		6C48AF2616CAE47600492C89 /* CSGMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGMainViewController.m; sourceTree = "<group>"; };
-		6C48AF2916CAE47600492C89 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CSGMainViewController_iPhone.xib; sourceTree = "<group>"; };
-		6C48AF2C16CAE47600492C89 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CSGMainViewController_iPad.xib; sourceTree = "<group>"; };
 		6C48AF3416CAFACE00492C89 /* CSGLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSGLocationManager.h; sourceTree = "<group>"; };
 		6C48AF3516CAFACE00492C89 /* CSGLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSGLocationManager.m; sourceTree = "<group>"; };
 		6C48AF3616CAFACE00492C89 /* CSGMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSGMapViewController.h; sourceTree = "<group>"; };
 		6C48AF3716CAFACE00492C89 /* CSGMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSGMapViewController.m; sourceTree = "<group>"; };
-		6C48AF3916CAFACE00492C89 /* LincolnCountryClub.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LincolnCountryClub.gpx; sourceTree = "<group>"; };
 		6C48AF3A16CAFACE00492C89 /* LincolnNE.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LincolnNE.gpx; sourceTree = "<group>"; };
-		6C48AF4016CAFAFE00492C89 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CSGMapViewController_iPad.xib; sourceTree = "<group>"; };
-		6C48AF4216CAFAFE00492C89 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CSGMapViewController_iPhone.xib; sourceTree = "<group>"; };
 		6C48AF4616CAFC8D00492C89 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6C48AF4816CAFC9D00492C89 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9604FBEE1CB6BEC900E5CB5E /* UniversityOfNebraska.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UniversityOfNebraska.gpx; sourceTree = "<group>"; };
 		9609F4851CB29C7100532CDD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9641635C1CAEF9CF00F16493 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,12 +134,8 @@
 			children = (
 				6C48AF2516CAE47600492C89 /* CSGMainViewController.h */,
 				6C48AF2616CAE47600492C89 /* CSGMainViewController.m */,
-				6C48AF2816CAE47600492C89 /* CSGMainViewController_iPhone.xib */,
-				6C48AF2B16CAE47600492C89 /* CSGMainViewController_iPad.xib */,
 				6C48AF3616CAFACE00492C89 /* CSGMapViewController.h */,
 				6C48AF3716CAFACE00492C89 /* CSGMapViewController.m */,
-				6C48AF3F16CAFAFE00492C89 /* CSGMapViewController_iPad.xib */,
-				6C48AF4116CAFAFE00492C89 /* CSGMapViewController_iPhone.xib */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -155,7 +143,7 @@
 		6C48AF3816CAFACE00492C89 /* gpx */ = {
 			isa = PBXGroup;
 			children = (
-				6C48AF3916CAFACE00492C89 /* LincolnCountryClub.gpx */,
+				9604FBEE1CB6BEC900E5CB5E /* UniversityOfNebraska.gpx */,
 				6C48AF3A16CAFACE00492C89 /* LincolnNE.gpx */,
 			);
 			path = gpx;
@@ -226,14 +214,10 @@
 				6C48AF2016CAE47600492C89 /* Default.png in Resources */,
 				6C48AF2216CAE47600492C89 /* Default@2x.png in Resources */,
 				9609F4861CB29C7200532CDD /* Main.storyboard in Resources */,
+				9604FBEF1CB6BEC900E5CB5E /* UniversityOfNebraska.gpx in Resources */,
 				6C48AF2416CAE47600492C89 /* Default-568h@2x.png in Resources */,
-				6C48AF2A16CAE47600492C89 /* CSGMainViewController_iPhone.xib in Resources */,
-				6C48AF2D16CAE47600492C89 /* CSGMainViewController_iPad.xib in Resources */,
 				9641635D1CAEF9CF00F16493 /* Launch Screen.storyboard in Resources */,
-				6C48AF3D16CAFACE00492C89 /* LincolnCountryClub.gpx in Resources */,
 				6C48AF3E16CAFACE00492C89 /* LincolnNE.gpx in Resources */,
-				6C48AF4316CAFAFE00492C89 /* CSGMapViewController_iPad.xib in Resources */,
-				6C48AF4416CAFAFE00492C89 /* CSGMapViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,38 +245,6 @@
 				6C48AF1716CAE47600492C89 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6C48AF2816CAE47600492C89 /* CSGMainViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C48AF2916CAE47600492C89 /* en */,
-			);
-			name = CSGMainViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		6C48AF2B16CAE47600492C89 /* CSGMainViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C48AF2C16CAE47600492C89 /* en */,
-			);
-			name = CSGMainViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-		6C48AF3F16CAFAFE00492C89 /* CSGMapViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C48AF4016CAFAFE00492C89 /* en */,
-			);
-			name = CSGMapViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-		6C48AF4116CAFAFE00492C89 /* CSGMapViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C48AF4216CAFAFE00492C89 /* en */,
-			);
-			name = CSGMapViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

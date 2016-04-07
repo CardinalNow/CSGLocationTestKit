@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *mapButton;
 @property (weak, nonatomic) IBOutlet UILabel *currentLocationLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @property (strong, nonatomic) CSGMapViewController *mapController;
 @property (strong, nonatomic) CSGLocationManager *locationManager;
@@ -24,27 +25,18 @@
 
 @implementation CSGMainViewController
 
--(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-
-    if(self){
-        _locationManager = [[CSGLocationManager alloc] init];
-    }
-
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+	self.locationManager = [CSGLocationManager sharedInstance];
+	
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newLocationWasReceived:) name:LOCATION_UPDATED_NOTIFICATION object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationTrackingStopped) name:LOCATION_TRACKING_STOPPED object:nil];
 
-	[self.locationManager.locationManager requestWhenInUseAuthorization];
-    [_locationManager startLocationTracking];
+	[self.locationManager.locationManager requestAlwaysAuthorization];
+    [self.locationManager startLocationTracking];
 
-    self.title = @"Location Testing";
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,6 +56,7 @@
 
 -(void)newLocationWasReceived:(NSNotification *)notification{
     _locationReceived = YES;
+	[self.activityIndicator stopAnimating];
 
     NSDictionary *info = [notification userInfo];
     CLLocation *location = info[kCurrentLocationKey];
@@ -72,8 +65,10 @@
 }
 
 -(void)locationTrackingStopped{
-    if(!_locationReceived)
+	if(!_locationReceived){
         self.currentLocationLabel.text = @"No location could be found";
+		[self.activityIndicator stopAnimating];
+	}
 }
 
 @end
