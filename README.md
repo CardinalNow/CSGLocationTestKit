@@ -48,3 +48,5 @@ The first screen is really just a validation screen. If you run the project as i
 The second screen is where you can do a bit more with region monitoring. The coordinate and region are hardcoded within the app to be a coordinate in Lincoln, NE and a radius of 500m around that coordinate. Enable region monitoring by tapping the "Enable Geofencing" button. Since the simulator is still simulating only 1 location, not much will happen. 
 
 While the application is running in the simulator, switch back to Xcode. In the Debug Area (bottom of the Xcode window), click the blue location arrow to open the "Simulate Location" menu. Select "UniversityOfNebraska" to change the GPX file that is loaded into the simulator. Switch back to the simulator, and you should see the current location dot moving around the map. As it nears and leaves the region being monitored, the label text and appearance will change accordingly. 
+
+//TODO Add Instrument Instruction
